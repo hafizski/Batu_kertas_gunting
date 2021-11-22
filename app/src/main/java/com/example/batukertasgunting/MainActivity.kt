@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
             ivHasil.textSize = 32f
         }
     }
-
+// tes push
     private fun oneClick(image1: ImageView, image2: ImageView, image3: ImageView) {
         image1.isEnabled = false
         image2.isEnabled = false
