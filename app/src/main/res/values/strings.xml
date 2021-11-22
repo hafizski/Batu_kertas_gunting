@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BatuKertasGunting</string>
+    <string name="pemain_menang">Pemain Menang</string>
+    <string name="komputer_menang">Komputer Menang</string>
+    <string name="seri">SERI</string>
+    <string name="vs">VS</string>
+</resources>
