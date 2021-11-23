@@ -10,11 +10,12 @@
     <ImageView
         android:id="@+id/judul"
         android:layout_width="380dp"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
         android:layout_marginStart="00dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="00dp"
-        android:src="@drawable/judulgame"
+        android:src="@drawable/judul"
+        android:contentDescription="@string/kertas_batu_gunting"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,97 +24,99 @@
         android:id="@+id/tvPemain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Pemain"
-        android:textColor="@color/greytext"
-        android:textSize="32dp"
-        app:layout_constraintStart_toStartOf="@id/judul"
-        app:layout_constraintTop_toBottomOf="@id/judul" />
+        android:layout_marginStart="16sp"
+        android:text="@string/pemain_1"
+        android:textColor="@color/cyan"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvKomputer" />
 
     <ImageView
         android:id="@+id/ivBatu1"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="Batu"
+        android:contentDescription="@string/pemain_1_memilih_batu"
         android:src="@drawable/batu"
         app:layout_constraintStart_toStartOf="@id/tvPemain"
-        app:layout_constraintTop_toBottomOf="@id/tvPemain" />
+        app:layout_constraintTop_toTopOf="@id/ivBatu2" />
 
     <ImageView
         android:id="@+id/ivKertas1"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="Kertas"
+        android:contentDescription="@string/pemain_1_memilih_kertas"
         android:src="@drawable/kertas"
         app:layout_constraintStart_toStartOf="@id/ivBatu1"
-        app:layout_constraintTop_toBottomOf="@id/ivBatu1" />
+        app:layout_constraintTop_toTopOf="@id/ivKertas2" />
 
     <ImageView
         android:id="@+id/ivGunting1"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="Gunting"
+        android:contentDescription="@string/pemain_1_memilih_gunting"
         android:src="@drawable/gunting"
         app:layout_constraintStart_toStartOf="@id/ivKertas1"
-        app:layout_constraintTop_toBottomOf="@id/ivKertas1" />
+        app:layout_constraintTop_toTopOf="@id/ivGunting2" />
 
     <TextView
         android:id="@+id/tvKomputer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Komputer"
-        android:textColor="@color/greytext"
-        android:textSize="32dp"
-        app:layout_constraintEnd_toEndOf="@id/judul"
-        app:layout_constraintTop_toBottomOf="@id/judul" />
+        android:layout_marginEnd="16sp"
+        android:text="@string/com"
+        android:textColor="@color/cyan"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/ivBatu2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judul" />
 
     <ImageView
         android:id="@+id/ivBatu2"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="Batu"
+        android:contentDescription="@string/pemain_1_memilih_batu"
         android:src="@drawable/batu"
+        app:layout_constraintBottom_toTopOf="@+id/ivKertas2"
         app:layout_constraintEnd_toEndOf="@id/tvKomputer"
-        app:layout_constraintTop_toBottomOf="@id/tvKomputer" />
+        app:layout_constraintTop_toBottomOf="@+id/tvKomputer" />
 
     <ImageView
         android:id="@+id/ivKertas2"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="Kertas"
+        android:contentDescription="@string/pemain_1_memilih_kertas"
         android:src="@drawable/kertas"
+        app:layout_constraintBottom_toTopOf="@+id/ivGunting2"
         app:layout_constraintEnd_toEndOf="@id/ivBatu2"
-        app:layout_constraintTop_toBottomOf="@id/ivBatu2" />
+        app:layout_constraintTop_toBottomOf="@+id/ivBatu2" />
 
     <ImageView
         android:id="@+id/ivGunting2"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="Gunting"
+        android:contentDescription="@string/pemain_1_memilih_gunting"
         android:src="@drawable/gunting"
+        app:layout_constraintBottom_toTopOf="@+id/ivReset"
         app:layout_constraintEnd_toEndOf="@id/ivKertas2"
-        app:layout_constraintTop_toBottomOf="@id/ivKertas2" />
-
+        app:layout_constraintTop_toBottomOf="@+id/ivKertas2" />
 
     <TextView
         android:id="@+id/ivHasil"
-        android:layout_width="100dp"
+        android:layout_width="200dp"
         android:layout_height="100dp"
-        android:layout_marginTop="100dp"
         android:gravity="center"
         android:text="@string/vs"
-        android:textColor="@color/white"
+        android:textColor="@color/redb"
         android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivKertas2"
         app:layout_constraintEnd_toEndOf="@id/judul"
         app:layout_constraintStart_toStartOf="@id/judul"
-        app:layout_constraintTop_toBottomOf="@id/judul" />
+        app:layout_constraintTop_toTopOf="@id/ivKertas1" />
 
     <ImageView
         android:id="@+id/ivReset"
@@ -121,37 +124,9 @@
         android:layout_height="60dp"
         android:layout_marginTop="100dp"
         android:src="@drawable/reset"
+        android:contentDescription="@string/reset"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/ivGunting2"
-        app:layout_constraintTop_toBottomOf="@id/ivGunting2" />
-
-    <!--<ImageView
-        android:id="@+id/ivSeri"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="100dp"
-        android:src="@drawable/seri"
-        app:layout_constraintEnd_toEndOf="@id/judul"
-        app:layout_constraintStart_toStartOf="@id/judul"
-        app:layout_constraintTop_toBottomOf="@id/judul" />
-
-    <ImageView
-        android:id="@+id/ivPemainMenang"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="100dp"
-        android:src="@drawable/pemain_menang"
-        app:layout_constraintEnd_toEndOf="@id/judul"
-        app:layout_constraintStart_toStartOf="@id/judul"
-        app:layout_constraintTop_toBottomOf="@id/judul" />
-
-    <ImageView
-        android:id="@+id/ivKomputerMenang"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="100dp"
-        android:src="@drawable/komputer_menang"
-        app:layout_constraintEnd_toEndOf="@id/judul"
-        app:layout_constraintStart_toStartOf="@id/judul"
-        app:layout_constraintTop_toBottomOf="@id/judul" />-->
+        app:layout_constraintTop_toBottomOf="@+id/ivGunting2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
                 Log.d("${btnPemain[index].contentDescription}", "Pemain click")
                 Log.d("$hasilKomputer", "Komputer Memilih")
                 hasilKomputer.setBackgroundResource(R.drawable.btn_corner)
-                oneClick(ivBatu1, ivKertas1, ivGunting1)
+                sekaliKlik(ivBatu1, ivKertas1, ivGunting1)
                 cekSuit(btnPemain[index].contentDescription, hasilKomputer.contentDescription)
                 Toast.makeText(
                     this, "${btnPemain[index].contentDescription}", Toast.LENGTH_SHORT
@@ -74,33 +74,42 @@ class MainActivity : AppCompatActivity() {
                 it.setBackgroundResource(android.R.color.transparent)
             }
             ivHasil.setText(R.string.vs)
-            bisaClick(ivBatu1, ivKertas1, ivGunting1)
+            ivHasil.setBackgroundColor(getColor(R.color.blackbg))
+            ivHasil.textSize = 72f
+            ivHasil.setTextColor(getColor(R.color.redb))
+            bisaKlik(ivBatu1, ivKertas1, ivGunting1)
         }
     }
 
     private fun cekSuit(pemain: CharSequence, komputer: CharSequence) {
         if (pemain == komputer) {
-            Log.d("Draw", "Click")
+            Log.d("Seri", "Click")
             ivHasil.setText(R.string.seri)
+            ivHasil.setBackgroundColor(getColor(R.color.bluebdraw))
             ivHasil.textSize = 32f
+            ivHasil.setTextColor(getColor(R.color.white))
         } else if (pemain == ivBatu1.contentDescription && komputer == ivGunting2.contentDescription || pemain == ivKertas1.contentDescription && komputer == ivBatu2.contentDescription || pemain == ivGunting1.contentDescription && komputer == ivKertas2.contentDescription) {
-            Log.d("pemain_menang", "click")
+            Log.d("pemain_menang", "Click")
             ivHasil.setText(R.string.pemain_menang)
-            ivHasil.textSize = 32f
+            ivHasil.setBackgroundColor(getColor(R.color.greenbbtn))
+            ivHasil.textSize = 24f
+            ivHasil.setTextColor(getColor(R.color.white))
         } else {
             Log.d("Hasil: ", "$pemain vs $komputer")
             ivHasil.setText(R.string.komputer_menang)
-            ivHasil.textSize = 32f
+            ivHasil.setBackgroundColor(getColor(R.color.greenbbtn))
+            ivHasil.textSize = 24f
+            ivHasil.setTextColor(getColor(R.color.white))
         }
     }
-// tes push
-    private fun oneClick(image1: ImageView, image2: ImageView, image3: ImageView) {
+
+    private fun sekaliKlik(image1: ImageView, image2: ImageView, image3: ImageView) {
         image1.isEnabled = false
         image2.isEnabled = false
         image3.isEnabled = false
     }
 
-    private fun bisaClick(image1: ImageView, image2: ImageView, image3: ImageView) {
+    private fun bisaKlik(image1: ImageView, image2: ImageView, image3: ImageView) {
         image1.isEnabled = true
         image2.isEnabled = true
         image3.isEnabled = true

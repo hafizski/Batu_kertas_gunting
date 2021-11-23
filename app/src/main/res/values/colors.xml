@@ -16,4 +16,11 @@
     <color name="greenbox">#54B340</color>
     <color name="orange">#F08519</color>
     <color name="greytext">#DCDDDD</color>
+    <color name="pupleb">#C77CA3</color>
+    <color name="orangeb">#F2B36C</color>
+    <color name="greenbtext">#9CC083</color>
+    <color name="redb">#Ff0008</color>
+    <color name="greenbbtn">#92D051</color>
+    <color name="bluebdraw">#0071C1</color>
+    <color name="bluebbtn">#C1DCE7</color>
 </resources>

@@ -1,7 +1,14 @@
 <resources>
     <string name="app_name">BatuKertasGunting</string>
-    <string name="pemain_menang">Pemain Menang</string>
-    <string name="komputer_menang">Komputer Menang</string>
-    <string name="seri">SERI</string>
+    <string name="pemain_menang">Pemain 1 MENANG</string>
+    <string name="komputer_menang">Pemain 2 MENANG</string>
+    <string name="seri">DRAW</string>
     <string name="vs">VS</string>
+    <string name="kertas_batu_gunting">Kertas Batu Gunting</string>
+    <string name="pemain_1">Pemain 1</string>
+    <string name="pemain_1_memilih_batu">Pemain 1 Memilih Batu</string>
+    <string name="pemain_1_memilih_kertas">Pemain 1 Memilih Kertas</string>
+    <string name="pemain_1_memilih_gunting">Pemain 1 Memilih Gunting</string>
+    <string name="com">COM</string>
+    <string name="reset">Reset</string>
 </resources>
