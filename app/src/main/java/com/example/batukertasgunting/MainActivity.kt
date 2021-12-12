@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.core.app.NotificationCompat.getColor
 import org.w3c.dom.Text
 
 @RequiresApi(Build.VERSION_CODES.M)
@@ -74,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                 it.setBackgroundResource(android.R.color.transparent)
             }
             ivHasil.setText(R.string.vs)
-            ivHasil.setBackgroundColor(getColor(R.color.blackbg))
+            ivHasil.setBackgroundColor(getColor(R.color.white))
             ivHasil.textSize = 72f
             ivHasil.setTextColor(getColor(R.color.redb))
             bisaKlik(ivBatu1, ivKertas1, ivGunting1)

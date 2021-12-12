@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <ImageView
@@ -14,8 +14,8 @@
         android:layout_marginStart="00dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="00dp"
-        android:src="@drawable/judul"
         android:contentDescription="@string/kertas_batu_gunting"
+        android:src="@drawable/splash_screen1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -123,8 +123,8 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="100dp"
-        android:src="@drawable/reset"
         android:contentDescription="@string/reset"
+        android:src="@drawable/reset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/ivGunting2"
         app:layout_constraintTop_toBottomOf="@+id/ivGunting2" />
